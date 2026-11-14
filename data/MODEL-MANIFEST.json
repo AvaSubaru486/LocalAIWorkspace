@@ -1,0 +1,22 @@
+[
+  {
+    "File": "data/models/qwen3-8b/Qwen3-8B-UD-IQ2_XXS.gguf",
+    "Bytes": 2605221696,
+    "Sha256": "b22bc929d9d093bf7a4f3b4086873a02f7dc4731d135a215429c60d27ce27a89"
+  },
+  {
+    "File": "data/models/gemma3-27b-fast/gemma-3-27b-it-UD-IQ1_S.gguf",
+    "Bytes": 6506339424,
+    "Sha256": "c9ce917c9c698f161faabe8aa068460be5cd0a4a2de1a2cc2fc801681417e653"
+  },
+  {
+    "File": "data/models/gemma3-27b-fast/mmproj-F16.gguf",
+    "Bytes": 857739392,
+    "Sha256": "debe2545831a2566dcec81992b9aa8fa8381c5a0a3588c0b59a41cc9c610cfe7"
+  },
+  {
+    "File": "data/models/llama3-70b-q4km/Llama-3.3-70B-Instruct-UD-IQ1_S.gguf",
+    "Bytes": 15854029408,
+    "Sha256": "76d52799879a1a151e472a1f49492f9f329b2ac79e4435250bee8c68ca5dfdf6"
+  }
+]

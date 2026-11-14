@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">候选词核对与 token 速度</title>
+  <desc id="desc">小助手可先提出候选词，再由大模型逐个核对；候选预测仅为概念示意，图中速度表显示 token 每秒。</desc>
+  <rect width="1200" height="520" rx="28" fill="#f5f8fc"/>
+  <text x="60" y="68" font-family="Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#183650">让大模型少做重复计算：一种候选核对思路</text>
+  <rect x="65" y="125" width="280" height="175" rx="22" fill="#eaf2ff" stroke="#9ebbe0" stroke-width="3"/>
+  <circle cx="130" cy="185" r="26" fill="#fff" stroke="#527caf" stroke-width="4"/>
+  <circle cx="195" cy="185" r="26" fill="#fff" stroke="#527caf" stroke-width="4"/>
+  <circle cx="260" cy="185" r="26" fill="#fff" stroke="#527caf" stroke-width="4"/>
+  <text x="130" y="194" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#275984">?</text>
+  <text x="195" y="194" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#275984">?</text>
+  <text x="260" y="194" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#275984">?</text>
+  <text x="205" y="250" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#183650">小助手先猜几个词</text>
+  <line x1="365" y1="212" x2="490" y2="212" stroke="#527caf" stroke-width="7"/>
+  <path d="M480 194l28 18-28 18" fill="none" stroke="#527caf" stroke-width="7"/>
+  <rect x="525" y="125" width="300" height="175" rx="22" fill="#eaf7ef" stroke="#9fc8aa" stroke-width="3"/>
+  <path d="M600 180l30 30 68-70" fill="none" stroke="#39845a" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="675" y="250" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#183650">大模型负责核对</text>
+  <text x="675" y="280" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#536579">通过核对才采用</text>
+  <line x1="845" y1="212" x2="930" y2="212" stroke="#527caf" stroke-width="7"/>
+  <path d="M920 194l28 18-28 18" fill="none" stroke="#527caf" stroke-width="7"/>
+  <rect x="970" y="125" width="175" height="175" rx="22" fill="#fff4dc" stroke="#dfbf76" stroke-width="3"/>
+  <path d="M1003 238a55 55 0 1 1 109 0" fill="none" stroke="#bd8320" stroke-width="7"/>
+  <path d="M1058 235l31-45" stroke="#bd8320" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="1058" cy="235" r="8" fill="#bd8320"/>
+  <text x="1058" y="275" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#183650">token/s</text>
+  <rect x="65" y="345" width="1080" height="110" rx="18" fill="#fff0d9" stroke="#e7c783" stroke-width="2"/>
+  <text x="95" y="390" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#744d0a">说明：</text>
+  <text x="185" y="390" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#744d0a">这是原理示意图，不代表当前软件已接入候选核对或已获得加速。</text>
+  <text x="95" y="428" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#744d0a">token 是模型切分文字用的小片段；最终要看长回答的实际 token/s。</text>
+</svg>

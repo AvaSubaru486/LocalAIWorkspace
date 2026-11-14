@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+  <title id="title">量化压缩与按层加载</title>
+  <desc id="desc">左边用缩小高清照片作比喻：文件变小也可能损失细节；右边展示按需逐层读取，一次只把当前层放在桌面。</desc>
+  <rect width="1200" height="540" rx="28" fill="#f7f8fc"/>
+  <text x="60" y="68" font-family="Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#183650">两种省空间的方法，也各有代价</text>
+  <rect x="55" y="110" width="525" height="370" rx="24" fill="#eef5ff" stroke="#b7cbe4" stroke-width="3"/>
+  <text x="85" y="158" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#183650">① 量化：把高清照片缩小</text>
+  <rect x="105" y="220" width="170" height="150" rx="18" fill="#fff" stroke="#4c7091" stroke-width="4"/>
+  <circle cx="230" cy="255" r="16" fill="#f2c46d"/>
+  <path d="M125 345l45-55 32 35 22-25 32 45z" fill="#9cc4a7" stroke="#4c7091" stroke-width="4" stroke-linejoin="round"/>
+  <line x1="305" y1="295" x2="390" y2="295" stroke="#4c7091" stroke-width="6"/>
+  <path d="M380 278l25 17-25 17" fill="none" stroke="#4c7091" stroke-width="6"/>
+  <rect x="430" y="250" width="85" height="90" rx="12" fill="#d8e7f7" stroke="#4c7091" stroke-width="4"/>
+  <circle cx="492" cy="271" r="8" fill="#f2c46d"/>
+  <path d="M442 325l20-27 15 16 11-12 17 23z" fill="#9cc4a7" stroke="#4c7091" stroke-width="3" stroke-linejoin="round"/>
+  <text x="190" y="407" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#536579">高清大图</text>
+  <text x="474" y="377" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#536579">更小的图像</text>
+  <text x="85" y="447" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#8b5115">文件更小，也可能丢失细节</text>
+  <rect x="620" y="110" width="525" height="370" rx="24" fill="#ecf8f0" stroke="#acd2b9" stroke-width="3"/>
+  <text x="650" y="158" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#183650">② 分层：一次只拿一章</text>
+  <path d="M700 245h130l25 20v95H700z" fill="#fff" stroke="#45845c" stroke-width="4"/>
+  <path d="M830 245v25h25" fill="none" stroke="#45845c" stroke-width="4"/>
+  <path d="M724 290h78M724 315h78M724 340h55" stroke="#91b69a" stroke-width="7" stroke-linecap="round"/>
+  <line x1="880" y1="300" x2="950" y2="300" stroke="#45845c" stroke-width="6"/>
+  <path d="M940 283l25 17-25 17" fill="none" stroke="#45845c" stroke-width="6"/>
+  <rect x="975" y="265" width="125" height="110" rx="14" fill="#fff" stroke="#45845c" stroke-width="4"/>
+  <path d="M995 290h85M995 315h85M995 340h60" stroke="#91b69a" stroke-width="7" stroke-linecap="round"/>
+  <text x="765" y="407" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#536579">磁盘里的整本书</text>
+  <text x="1037" y="407" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#536579">内存中的当前一层</text>
+  <text x="650" y="447" font-family="Microsoft YaHei, sans-serif" font-size="19" fill="#356e49">分批占用内存；来回换章需要时间</text>
+</svg>

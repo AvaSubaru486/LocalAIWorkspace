@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1320" viewBox="0 0 1600 1320" role="img" aria-labelledby="title desc">
+  <title id="title">同一台电脑上的常规自部署与 Local AI Workspace 结构对比</title>
+  <desc id="desc">对比用户自行选择运行时的本地部署与本项目便携工作流。两者共用同一硬件，实际生成速度由模型、CPU、内存、存储及参数决定；本项目增加预置模型、低内存保护、进程回收和不含对话内容的日志 ZIP，并标出当前有限实测与速度目标。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#416582" stroke-width="2"/></marker>
+    <style>
+      text { font-family: "Microsoft YaHei UI", "Noto Sans CJK SC", sans-serif; fill: #183247; }
+      .title { font-size: 36px; font-weight: 700; }
+      .subtitle { font-size: 20px; fill: #50697c; }
+      .head { font-size: 24px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .small { font-size: 16px; fill: #526d80; }
+      .box { fill: #fff; stroke: #b9cbd8; stroke-width: 2; rx: 18; }
+      .blue { fill: #e9f3fb; stroke: #83aeca; }
+      .mint { fill: #e8f5ef; stroke: #7fb89b; }
+      .amber { fill: #fff3dc; stroke: #d6ad63; }
+      .violet { fill: #f0edfb; stroke: #aca0d4; }
+      .line { fill: none; stroke: #416582; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="1320" fill="#f4f8fb"/>
+  <text x="72" y="72" class="title">同一台电脑上的两种本地自部署方式</text>
+  <text x="72" y="110" class="subtitle">统一部署 · 按需读取 · 进程管理 · 日志汇总</text>
+
+  <rect x="72" y="150" width="1456" height="118" class="box amber"/>
+  <text x="104" y="194" class="head">本次对比的设备</text>
+  <text x="104" y="232" class="body">Intel Core i5-1235U · 10 核 / 12 线程 · 16 GiB RAM · Intel UHD 核显 · 无可用 NVIDIA CUDA</text>
+
+  <rect x="72" y="312" width="700" height="532" class="box blue"/>
+  <text x="108" y="360" class="head">常规自部署</text>
+  <text x="108" y="398" class="small">例：用户自行安装并配置 llama.cpp 或 Ollama</text>
+  <rect x="108" y="435" width="620" height="88" class="box"/>
+  <text x="138" y="472" class="body">安装运行时 · 选择模型与量化</text>
+  <text x="138" y="501" class="small">自行配置上下文、线程、显卡卸载和界面</text>
+  <path d="M418 523 V551" class="line"/>
+  <rect x="108" y="562" width="620" height="94" class="box"/>
+  <text x="138" y="601" class="body">本地模型进程</text>
+  <text x="138" y="632" class="small">内存预算、日志格式和错误处理视所选工具而定</text>
+  <path d="M418 656 V684" class="line"/>
+  <rect x="108" y="695" width="620" height="102" class="box violet"/>
+  <text x="138" y="737" class="body">CPU / RAM / 存储</text>
+  <text x="138" y="770" class="small">同机同模型仍受相同硬件上限影响</text>
+
+  <rect x="828" y="312" width="700" height="532" class="box mint"/>
+  <text x="864" y="360" class="head">Local AI Workspace</text>
+  <text x="864" y="398" class="small">EXE、运行库、桌面聊天和三款模型整合在便携包</text>
+  <rect x="864" y="435" width="620" height="88" class="box"/>
+  <text x="894" y="462" class="body">文字：8B / 27B 映射 · 70B 分层读取</text>
+  <text x="894" y="488" class="body">图片 / 视频帧 → 同一个 27B + 视觉投影</text>
+  <text x="894" y="513" class="small">先核算上下文；切换执行路径时回收旧进程</text>
+  <path d="M1174 523 V551" class="line"/>
+  <rect x="864" y="562" width="620" height="94" class="box"/>
+  <text x="894" y="601" class="body">模型进程管理与内存边界</text>
+  <text x="894" y="632" class="small">按当前可用内存设定进程边界，结束后回收</text>
+  <path d="M1174 656 V684" class="line"/>
+  <rect x="864" y="695" width="620" height="102" class="box violet"/>
+  <text x="894" y="737" class="body">同一台 CPU / RAM / 存储</text>
+  <text x="894" y="770" class="small">协调权重驻留、CPU 计算与 SSD 读取</text>
+
+  <rect x="72" y="882" width="1456" height="114" class="box"/>
+  <text x="104" y="915" class="head">三档聊天模型 + 27B 配套视觉组件</text>
+  <text x="104" y="949" class="body">Qwen3 8B IQ2_XXS：2.61 GB　·　Gemma 3 27B IQ1_S：6.51 GB　·　Llama 3.3 70B IQ1_S：15.85 GB</text>
+  <text x="104" y="980" class="small">27B 另配 0.858 GB 视觉投影；视频只解释抽样画面，不转写声音。</text>
+
+  <rect x="72" y="1030" width="700" height="88" class="box blue"/>
+  <text x="104" y="1068" class="body">公平测速：固定模型哈希、后端、参数、提示和输出长度</text>
+  <text x="104" y="1098" class="small">比较首字、decode token/s、整轮速度、内存和重复结果</text>
+
+  <rect x="828" y="1030" width="700" height="88" class="box mint"/>
+  <text x="860" y="1068" class="body">一键导出运行日志 ZIP</text>
+  <text x="860" y="1098" class="small">包含设备和运行指标；排除提示词、回答、附件与会话数据库</text>
+
+  <rect x="72" y="1150" width="1456" height="126" class="box amber"/>
+  <text x="104" y="1190" class="head">参考机运行记录 · 短输出样本</text>
+  <text x="104" y="1228" class="body">8B：6.134 token/s　·　27B：0.295 token/s　·　70B：0.123 token/s</text>
+  <text x="104" y="1258" class="small">对应输出 3 / 4 / 3 个 token；首字 3.47 / 17.38 / 52.28 秒；完整离线包约 29.70 GB。</text>
+</svg>

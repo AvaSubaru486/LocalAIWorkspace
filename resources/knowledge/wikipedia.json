@@ -1,0 +1,15 @@
+{
+  "file": "data/knowledge/archives/wikipedia_en_100_mini_2026-01.zim",
+  "source": "https://github.com/Crosstalk-Solutions/project-nomad/blob/main/install/wikipedia_en_100_mini_2026-01.zim",
+  "upstream_git_blob_sha1": "e56ba3c8577551a77c365425a4fc490ed7a0ca7b",
+  "bytes": 4537782,
+  "sha256": "2811724b72fd34a0728c28b7456d3d6866579019fbbe7ffe28528f3450c252db",
+  "libzim_article_count": 4985,
+  "metadata_title": "Wikipedia 100",
+  "metadata_description": "Top hundred Wikipedia articles",
+  "metadata_date": "2026-01-15",
+  "language": "eng",
+  "count_note": "ZIM article_count includes entries such as redirects; it is not a count of distinct full-length articles.",
+  "content_license": "CC BY-SA 4.0 unless the individual Wikipedia page states otherwise; media retain their own licenses.",
+  "license_file": "docs/third-party/CC-BY-SA-4.0.txt"
+}

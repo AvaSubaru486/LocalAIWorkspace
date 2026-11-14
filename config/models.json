@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "mirrors": [
+    "https://huggingface.co",
+    "https://hf-mirror.com"
+  ],
+  "metadata_sources": [
+    {
+      "kind": "modelscope",
+      "api": "https://modelscope.cn/api/v1/models/{repo}/repo/files?Revision=master&Recursive=true",
+      "resolve": "https://modelscope.cn/models/{repo}/resolve/master/{file}"
+    },
+    {
+      "kind": "huggingface",
+      "api": "https://huggingface.co/api/models/{repo}?blobs=true",
+      "resolve": "https://huggingface.co/{repo}/resolve/{revision}/{file}"
+    },
+    {
+      "kind": "huggingface",
+      "api": "https://hf-mirror.com/api/models/{repo}?blobs=true",
+      "resolve": "https://hf-mirror.com/{repo}/resolve/{revision}/{file}"
+    }
+  ],
+  "models": [
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B 紧凑版 · IQ2_XXS",
+      "role": "chat",
+      "backend": "llama",
+      "repo_id": "unsloth/Qwen3-8B-GGUF",
+      "quantization": "UD-IQ2_XXS",
+      "bundled": true,
+      "license": "Apache-2.0",
+      "path": "data/models/qwen3-8b",
+      "entry": "Qwen3-8B-UD-IQ2_XXS.gguf",
+      "files": [
+        {
+          "path": "Qwen3-8B-UD-IQ2_XXS.gguf",
+          "size": 2605221696,
+          "sha256": "b22bc929d9d093bf7a4f3b4086873a02f7dc4731d135a215429c60d27ce27a89",
+          "revision": "a6adef130ffb23ddaf1a62fec9dced968c9bc482",
+          "urls": [
+            "https://hf-mirror.com/unsloth/Qwen3-8B-GGUF/resolve/a6adef130ffb23ddaf1a62fec9dced968c9bc482/Qwen3-8B-UD-IQ2_XXS.gguf",
+            "https://huggingface.co/unsloth/Qwen3-8B-GGUF/resolve/a6adef130ffb23ddaf1a62fec9dced968c9bc482/Qwen3-8B-UD-IQ2_XXS.gguf"
+          ]
+        }
+      ],
+      "note": "轻量文字模型；UD-IQ2_XXS 权重约 2.61 GB，使用 CPU 内存映射。",
+      "runtime_profile": {
+        "cpu_compatibility": "mapped",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64
+      },
+      "revision": "a6adef130ffb23ddaf1a62fec9dced968c9bc482"
+    },
+    {
+      "id": "gemma3-27b-fast",
+      "name": "Gemma 3 27B 紧凑版（实验） · IQ1_S",
+      "role": "chat",
+      "backend": "llama",
+      "repo_id": "unsloth/gemma-3-27b-it-GGUF",
+      "quantization": "UD-IQ1_S",
+      "bundled": true,
+      "license": "Gemma 使用条款，使用前接受上游许可",
+      "path": "data/models/gemma3-27b-fast",
+      "entry": "gemma-3-27b-it-UD-IQ1_S.gguf",
+      "vision_entry": "mmproj-F16.gguf",
+      "image_token_budget": 256,
+      "vision_runtime_profile": {
+        "cpu_compatibility": null,
+        "force_cpu": true,
+        "no_warmup": true,
+        "flash_attention": true,
+        "load_mode": "mmap",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 8,
+        "batch_size": 256,
+        "ubatch_size": 256
+      },
+      "files": [
+        {
+          "path": "gemma-3-27b-it-UD-IQ1_S.gguf",
+          "size": 6506339424,
+          "sha256": "c9ce917c9c698f161faabe8aa068460be5cd0a4a2de1a2cc2fc801681417e653",
+          "revision": "7cd0121f2530b00e42c4df952d4cad4418c0b3c1",
+          "urls": [
+            "https://hf-mirror.com/unsloth/gemma-3-27b-it-GGUF/resolve/7cd0121f2530b00e42c4df952d4cad4418c0b3c1/gemma-3-27b-it-UD-IQ1_S.gguf",
+            "https://huggingface.co/unsloth/gemma-3-27b-it-GGUF/resolve/7cd0121f2530b00e42c4df952d4cad4418c0b3c1/gemma-3-27b-it-UD-IQ1_S.gguf"
+          ]
+        },
+        {
+          "path": "mmproj-F16.gguf",
+          "size": 857739392,
+          "sha256": "debe2545831a2566dcec81992b9aa8fa8381c5a0a3588c0b59a41cc9c610cfe7",
+          "revision": "7cd0121f2530b00e42c4df952d4cad4418c0b3c1",
+          "urls": [
+            "https://huggingface.co/unsloth/gemma-3-27b-it-GGUF/resolve/7cd0121f2530b00e42c4df952d4cad4418c0b3c1/mmproj-F16.gguf",
+            "https://hf-mirror.com/unsloth/gemma-3-27b-it-GGUF/resolve/7cd0121f2530b00e42c4df952d4cad4418c0b3c1/mmproj-F16.gguf"
+          ]
+        }
+      ],
+      "resource_profile": {
+        "minimum_ram_gb": 8,
+        "recommended_ram_gb": 16,
+        "minimum_free_disk_gb": 10,
+        "estimated_quantized_weight_gib": 6.06,
+        "requires_cuda": false,
+        "speed_target_tokens_per_second": 4.0
+      },
+      "note": "文字与图片输入；UD-IQ1_S 权重约 6.51 GB，配套视觉组件。视频帧分析为实验功能。",
+      "runtime_profile": {
+        "cpu_compatibility": "mapped",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64
+      },
+      "revision": "7cd0121f2530b00e42c4df952d4cad4418c0b3c1"
+    },
+    {
+      "id": "llama3-70b-q4km-cpu",
+      "name": "Llama 3.3 70B 紧凑版（实验） · IQ1_S CPU",
+      "role": "chat",
+      "backend": "llama",
+      "repo_id": "unsloth/Llama-3.3-70B-Instruct-GGUF",
+      "quantization": "UD-IQ1_S",
+      "revision": "8f14c5c5d06fca109ff16f94496147a8479711de",
+      "bundled": true,
+      "license": "Llama 3.3 Community License",
+      "path": "data/models/llama3-70b-q4km",
+      "entry": "Llama-3.3-70B-Instruct-UD-IQ1_S.gguf",
+      "files": [
+        {
+          "path": "Llama-3.3-70B-Instruct-UD-IQ1_S.gguf",
+          "size": 15854029408,
+          "sha256": "76d52799879a1a151e472a1f49492f9f329b2ac79e4435250bee8c68ca5dfdf6",
+          "revision": "8f14c5c5d06fca109ff16f94496147a8479711de",
+          "urls": [
+            "https://hf-mirror.com/unsloth/Llama-3.3-70B-Instruct-GGUF/resolve/8f14c5c5d06fca109ff16f94496147a8479711de/Llama-3.3-70B-Instruct-UD-IQ1_S.gguf",
+            "https://huggingface.co/unsloth/Llama-3.3-70B-Instruct-GGUF/resolve/8f14c5c5d06fca109ff16f94496147a8479711de/Llama-3.3-70B-Instruct-UD-IQ1_S.gguf"
+          ]
+        }
+      ],
+      "runtime_profile": {
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64,
+        "load_mode": "mmap",
+        "benchmark_threads": [
+          4,
+          8
+        ],
+        "benchmark_repetitions": 1,
+        "cpu_compatibility": "staged"
+      },
+      "resource_profile": {
+        "minimum_ram_gb": 24,
+        "recommended_ram_gb": 32,
+        "minimum_free_disk_gb": 20,
+        "estimated_quantized_weight_gib": 14.77,
+        "requires_cuda": false,
+        "speed_target_tokens_per_second": 0.5
+      },
+      "note": "70B 大参数模型；UD-IQ1_S 权重约 15.85 GB，使用分层 CPU 读取。"
+    }
+  ]
+}

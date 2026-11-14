@@ -1,0 +1,126 @@
+{
+  "release": "LocalAIWorkspace three-model portable release",
+  "built_at_local": "2026-10-28 13:46:45 +0800",
+  "default_model": "qwen3-8b",
+  "models": [
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B 紧凑版 · IQ2_XXS",
+      "path": "data/models/qwen3-8b",
+      "entry": "Qwen3-8B-UD-IQ2_XXS.gguf",
+      "bytes": 2605221696,
+      "sha256": "b22bc929d9d093bf7a4f3b4086873a02f7dc4731d135a215429c60d27ce27a89",
+      "quantization": "UD-IQ2_XXS",
+      "license": "Apache-2.0",
+      "runtime_profile": {
+        "cpu_compatibility": "mapped",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64
+      },
+      "resource_profile": null,
+      "vision_entry": null,
+      "vision_runtime_profile": null
+    },
+    {
+      "id": "gemma3-27b-fast",
+      "name": "Gemma 3 27B 紧凑版（实验） · IQ1_S",
+      "path": "data/models/gemma3-27b-fast",
+      "entry": "gemma-3-27b-it-UD-IQ1_S.gguf",
+      "bytes": 6506339424,
+      "sha256": "c9ce917c9c698f161faabe8aa068460be5cd0a4a2de1a2cc2fc801681417e653",
+      "quantization": "UD-IQ1_S",
+      "license": "Gemma 使用条款，使用前接受上游许可",
+      "runtime_profile": {
+        "cpu_compatibility": "mapped",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64
+      },
+      "resource_profile": {
+        "minimum_ram_gb": 8,
+        "recommended_ram_gb": 16,
+        "minimum_free_disk_gb": 10,
+        "estimated_quantized_weight_gib": 6.06,
+        "requires_cuda": false,
+        "speed_target_tokens_per_second": 4.0
+      },
+      "vision_entry": "mmproj-F16.gguf",
+      "vision_runtime_profile": {
+        "cpu_compatibility": null,
+        "force_cpu": true,
+        "no_warmup": true,
+        "flash_attention": true,
+        "load_mode": "mmap",
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 8,
+        "batch_size": 256,
+        "ubatch_size": 256
+      }
+    },
+    {
+      "id": "llama3-70b-q4km-cpu",
+      "name": "Llama 3.3 70B 紧凑版（实验） · IQ1_S CPU",
+      "path": "data/models/llama3-70b-q4km",
+      "entry": "Llama-3.3-70B-Instruct-UD-IQ1_S.gguf",
+      "bytes": 15854029408,
+      "sha256": "76d52799879a1a151e472a1f49492f9f329b2ac79e4435250bee8c68ca5dfdf6",
+      "quantization": "UD-IQ1_S",
+      "license": "Llama 3.3 Community License",
+      "runtime_profile": {
+        "context_length": 2048,
+        "max_new_tokens": 256,
+        "threads": 4,
+        "batch_size": 128,
+        "ubatch_size": 64,
+        "load_mode": "mmap",
+        "benchmark_threads": [
+          4,
+          8
+        ],
+        "benchmark_repetitions": 1,
+        "cpu_compatibility": "staged"
+      },
+      "resource_profile": {
+        "minimum_ram_gb": 24,
+        "recommended_ram_gb": 32,
+        "minimum_free_disk_gb": 20,
+        "estimated_quantized_weight_gib": 14.77,
+        "requires_cuda": false,
+        "speed_target_tokens_per_second": 0.5
+      },
+      "vision_entry": null,
+      "vision_runtime_profile": null
+    }
+  ],
+  "speed_targets_tokens_per_second": {
+    "gemma3-27b-fast": 4.0,
+    "llama3-70b-q4km-cpu": 0.5
+  },
+  "speed_acceptance": {
+    "gemma3-27b-fast": "Target: 4 token/s. Current short sample: 0.294683 token/s, 4 output tokens.",
+    "llama3-70b-q4km-cpu": "Target: 0.5 token/s. Current short sample: 0.122804 token/s, 3 output tokens.",
+    "hardware_independent_guarantee": false
+  },
+  "capability_retention": "Paired quality evaluation is pending.",
+  "auxiliary_model_bundled": false,
+  "vision_model_bundled": false,
+  "vision_projector_bundled": true,
+  "vision_chat_model": "gemma3-27b-fast",
+  "vision_scope": "The existing 27B model handles images and sampled video frames through its matching projector.",
+  "chat_content_in_runlog_zip": false,
+  "source_report": "weights-report.json",
+  "software_version": "2026.10.28.4",
+  "release_variant": "compact-low-bit",
+  "package_limit_decimal_bytes": 30000000000,
+  "new_quantization_runtime_acceptance": "Offline short text, two simple images, model switching, cancellation, log export and EXE lifecycle checks completed. Two video responses were incomplete. Sustained throughput and paired quality evaluation are pending.",
+  "release_acceptance_status": "ACCEPTED_COMPACT_RELEASE_WITH_KNOWN_VIDEO_LIMITATIONS",
+  "video_semantic_acceptance": false,
+  "vision_answer_limitation": "Two video samples did not complete the requested descriptions within the 32-token check.",
+  "copy_revision": "2026-10-28 competition presentation cleanup"
+}
