@@ -46,4 +46,4 @@ Windows 本地 AI 工作区，预置 Qwen3 8B、Gemma 3 27B、Llama 3.3 70B，�
 
 ![运行结构](assets/architecture.svg)
 
-作品原理与同机部署对比见 docs/PROJECT-INTRODUCTION.zh-CN.md；依赖许可见 docs/LICENSES.md。
+依赖许可见 docs/LICENSES.md。

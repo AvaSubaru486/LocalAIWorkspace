@@ -4,7 +4,7 @@
 
 Local AI Workspace 是面向 Windows 的本地 AI 工作区，将 Qwen3 8B、Gemma 3 27B、Llama 3.3 70B 三档模型、推理运行环境、桌面聊天与运行日志整合为便携应用。项目围绕低配置设备展开：通过低比特量化、按需读取、内存预算和进程生命周期管理，探索有限内存中的大参数模型运行。
 
-[项目博客](https://avasubaru486.github.io/blog/local-ai-workspace/) · [个人主页](https://avasubaru486.github.io/) · [下载源码与材料](https://github.com/AvaSubaru486/LocalAIWorkspace/archive/refs/heads/main.zip) · [答辩 PDF](presentation/LocalAIWorkspace-参赛答辩版-20261029.pdf)
+[项目博客](https://avasubaru486.github.io/blog/local-ai-workspace/) · [个人主页](https://avasubaru486.github.io/) · [下载源码与演示](https://github.com/AvaSubaru486/LocalAIWorkspace/archive/refs/heads/main.zip)
 
 ## 可以做什么
 
@@ -24,9 +24,9 @@ Local AI Workspace 是面向 Windows 的本地 AI 工作区，将 Qwen3 8B、Gem
 
 27B 的视觉组件另占约 0.86 GB，完整 ZIP 为 **29,697,284,670 字节**。本地推理使用电脑自身资源；模型、推理后端与第三方依赖沿用各自的许可证。
 
-## 获取源码与材料
+## 获取源码与演示
 
-本次公开发布包含应用源码、配置、技术文档、原始 Word / PPT / PDF 与演示视频。点击仓库的“Code → Download ZIP”，或使用 [源码与材料下载链接](https://github.com/AvaSubaru486/LocalAIWorkspace/archive/refs/heads/main.zip) 获取。
+本次公开发布包含应用源码、配置、使用指南、技术文档与演示视频。点击仓库的“Code → Download ZIP”，或使用 [源码与演示下载链接](https://github.com/AvaSubaru486/LocalAIWorkspace/archive/refs/heads/main.zip) 获取。
 
 模型权重、Python / Qt / CUDA 运行时、编译后的启动器和原始 29.70 GB 便携包未随本次发布上传。源码 ZIP 供阅读、研究与二次开发；从源码运行时，需要按 `requirements.txt`、`config/models.json` 和技术文档另行准备依赖、模型及推理后端。
 
@@ -36,7 +36,7 @@ Local AI Workspace 是面向 Windows 的本地 AI 工作区，将 Qwen3 8B、Gem
 
 ## 资料中记录的实机演示
 
-以下为 **2026-10-29 答辩材料**中的一组短任务，参考机为 i5-1235U、16 GiB 内存、Intel 核显，三档模型串行运行；上下文 512 tokens，最多生成 64 tokens。
+以下为作者提供的 **2026-10-29 实机记录**中的一组短任务，参考机为 i5-1235U、16 GiB 内存、Intel 核显，三档模型串行运行；上下文 512 tokens，最多生成 64 tokens。
 
 | 模型 | 实际输出 tokens | 后端解码 token/s | 首字时长 / 秒 | 整轮时长 / 秒 |
 | --- | ---: | ---: | ---: | ---: |
@@ -44,7 +44,7 @@ Local AI Workspace 是面向 Windows 的本地 AI 工作区，将 Qwen3 8B、Gem
 | 27B | 12 | 1.163 | 37.23 | 47.55 |
 | 70B | 10 | 0.057 | 153.98 | 330.14 |
 
-输入为“请用不超过20个汉字，介绍本地AI的作用。”这些数字来自随项目提供的展示材料，本次上传未重新运行模型测速；10 月 28 日说明文档记录了另一组更短样本，比较时请保留各自的测试条件。27B 4 token/s 与 70B 0.5 token/s 是后续优化目标。
+输入为“请用不超过20个汉字，介绍本地AI的作用。”这些数字来自作者提供的实机演示记录，本次上传未重新运行模型测速；比较时请保留对应的测试条件。27B 4 token/s 与 70B 0.5 token/s 是后续优化目标。
 
 图片已有简单样例验证，视频路径最多抽取 6 帧，当前两次视频回答的完整性仍需改进；该路径分析抽样画面，不转写音频。低比特量化的持续生成质量和成对任务评估仍需继续测量。
 
@@ -58,19 +58,13 @@ launcher/        Windows 启动器源码
 resources/       项目资源与知识库来源配置
 data/            模型清单及附带的知识库资料
 docs/            使用指南、技术说明和第三方许可
-documentation/   原始项目介绍与展板文案（Word）
-presentation/    原始项目汇报、答辩 PPT 与 PDF
 demo/            原理动画、三模型实机演示视频
 ```
 
 源码仓库不包含大型模型、Python/Qt/CUDA 运行时或编译后的应用。原始压缩包中的文档说明保留在 [docs/BUNDLED-README.md](docs/BUNDLED-README.md)。
 
-## 项目材料
+## 演示视频
 
-- [参赛答辩 PDF（2026-10-29）](presentation/LocalAIWorkspace-参赛答辩版-20261029.pdf)
-- [参赛答辩 PPT（2026-10-29）](presentation/LocalAIWorkspace-参赛答辩版-20261029.pptx)
-- [项目介绍 Word](documentation/LocalAIWorkspace-项目介绍-20261028.docx)
-- [展板文案 Word](documentation/LocalAIWorkspace-项目展板文案-20261028.docx)
 - [35 秒三模型实机演示](demo/LocalAIWorkspace-三模型实机演示-35秒-20261029.mp4)
 - [项目原理动画](demo/LocalAIWorkspace-项目原理动画-20261028.mp4)
 

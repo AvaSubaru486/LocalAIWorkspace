@@ -22,12 +22,10 @@
 
 ## 使用与技术资料
 
-- [使用指南](docs/beginner-guide/index.html)
-- [作品介绍与同机部署对比](docs/PROJECT-INTRODUCTION.zh-CN.md)
-- [运行结构图](docs/beginner-guide/assets/architecture.svg)
-- [展板文案](docs/PROJECT-BOARD.zh-CN.md)
-- [运行参数](docs/LOW-MEMORY.zh-CN.md)
-- [依赖许可](docs/LICENSES.md)
+- [使用指南](beginner-guide/index.html)
+- [运行结构图](beginner-guide/assets/architecture.svg)
+- [运行参数](LOW-MEMORY.zh-CN.md)
+- [依赖许可](LICENSES.md)
 
 ## 目录
 
